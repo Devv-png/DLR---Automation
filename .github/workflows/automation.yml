@@ -40,16 +40,18 @@ jobs:
           name: excel-output
           path: output/*.xlsx
 
-      - name: Send email with attachment
+      -       - name: Send email with attachment
         if: always()
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
-          server_port: 465
+          server_address: smtp.office365.com
+          server_port: 587
+          secure: starttls
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
-          to: your_email@gmail.com
-          from: "GitHub Bot <your_email@gmail.com>"
+          to: Dev.bhatia@rattanIndia.com
+          from: "GitHub Bot <your_email@outlook.com>"
           subject: "Daily Selenium Report"
           body: "Attached is your daily automation Excel file."
           attachments: "output/*.xlsx"
+
