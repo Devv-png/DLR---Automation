@@ -40,7 +40,7 @@ jobs:
           name: excel-output
           path: output/*.xlsx
 
-      -       - name: Send email with attachment
+            - name: Send email with attachment
         if: always()
         uses: dawidd6/action-send-mail@v3
         with:
@@ -53,5 +53,6 @@ jobs:
           from: "GitHub Bot <Dev.bhatia@rattanIndia.com>"
           subject: "Daily Selenium Report"
           body: "Attached is your daily automation Excel file."
-          attachments: "output/*.xlsx"
+          attachments: output/*.xlsx   # might need exact path if wildcard fails
+
 
