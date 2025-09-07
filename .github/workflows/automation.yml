@@ -50,7 +50,7 @@ jobs:
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
           to: Dev.bhatia@rattanIndia.com
-          from: "GitHub Bot <your_email@outlook.com>"
+          from: "GitHub Bot <Dev.bhatia@rattanIndia.com>"
           subject: "Daily Selenium Report"
           body: "Attached is your daily automation Excel file."
           attachments: "output/*.xlsx"
